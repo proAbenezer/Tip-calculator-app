@@ -51,12 +51,8 @@ function validateInputs() {
     peopleInputElement.value.trim() !== "" &&
     Number(peopleInputElement.value) > 0;
   const peopleInputValue = peopleInputElement.value;
-  const billInputValue = billInputElement.value;
-  if (
-    peopleInputValue === "" ||
-    peopleInputValue === "0" ||
-    peopleInputValue.startsWith("0")
-  ) {
+  /*   const billInputValue = billInputElement.value;
+  if (peopleInputValue === "0" || peopleInputValue.startsWith("0")) {
     message.innerHTML =
       "Can't be zero or negative, and no leading zeros allowed.";
     message.style.display = "block";
@@ -65,7 +61,7 @@ function validateInputs() {
     message.style.display = "block";
   } else {
     message.style.display = "none"; // Hide message if valid
-  }
+  } */
   /*   if (
     billInputValue === "" ||
     billInputValue === "0" ||
@@ -86,6 +82,18 @@ function validateInputs() {
   }
 }
 
+function resetValues() {
+  message.innerHTML = "";
+  totalAmountElement.innerHTML = "0.00";
+  tipAmountElement.innerHTML = "0.00";
+  peopleInputElement.value = "";
+  billInputElement.value = "";
+  customTipInputElement.value = "";
+  if (selectedTipBox) {
+    selectedTipBox.style.backgroundColor = " hsl(183, 100%, 15%)";
+    selectedTipBox.style.color = "#fff";
+  }
+}
 // Event listeners
 [billInputElement, peopleInputElement].forEach((input) =>
   input.addEventListener("input", (e) => {
@@ -128,3 +136,4 @@ customTipInputElement.addEventListener("input", function () {
   }
   validateInputs();
 });
+resetBtn.addEventListener("click", resetValues);
