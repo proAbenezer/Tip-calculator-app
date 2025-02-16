@@ -594,6 +594,14 @@ video {
   width: 100%;
 }
 
+.max-w-\[20px\] {
+  max-width: 20px;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -761,6 +769,46 @@ video {
   line-height: 1rem;
 }
 
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[6px\] {
+  font-size: 6px;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[\.5rem\] {
+  font-size: .5rem;
+}
+
+.text-\[\.3rem\] {
+  font-size: .3rem;
+}
+
+.text-\[\.4rem\] {
+  font-size: .4rem;
+}
+
+.text-\[\.46em\] {
+  font-size: .46em;
+}
+
+.text-\[\.8em\] {
+  font-size: .8em;
+}
+
+.text-\[\.5em\] {
+  font-size: .5em;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -852,11 +900,9 @@ video {
   font-style: italic;
 }
 
-#cash-input,
-#tip-input {
+#billInputContainer,
+#peopInputContainer {
   background-color: hsl(214, 50%, 95%);
-  border: none;
-  outline: none;
 }
 
 .placeholder\:text-center::-moz-placeholder {
@@ -903,8 +949,21 @@ video {
   color: hsl(184 14% 56% / var(--tw-text-opacity, 1));
 }
 
-.hover\:opacity-\[100\%\]:hover {
-  opacity: 100%;
+.hover\:bg-StrongCyan:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(172 67% 45% / var(--tw-bg-opacity, 1));
+}
+
+@media (min-width: 375px) {
+  .sm\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-\[\.5rem\] {
+    font-size: .5rem;
+  }
 }
 
 @media (min-width: 1024px) {

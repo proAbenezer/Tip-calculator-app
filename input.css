@@ -29,9 +29,7 @@
   font-weight: bold;
   font-style: italic;
 }
-#cash-input,
-#tip-input {
+#billInputContainer,
+#peopInputContainer {
   background-color: hsl(214, 50%, 95%);
-  border: none;
-  outline: none;
 }
